@@ -44,14 +44,14 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-neutral-50 dark:bg-slate-900 hover:bg-gray-200 dark:hover:bg-slate-800  rounded-lg shadow-lg hover:shadow-2xl/70 transition duration-300"
+            className="bg-neutral-50 dark:bg-slate-900 hover:bg-gray-200 dark:hover:bg-slate-800  rounded-lg shadow-lg hover:shadow-2xl/70 hover:scale-105 transition duration-300"
             data-aos="zoom-in"
             data-aos-delay={index * 100}
           >
             <img
               src={project.image}
               alt={project.title}
-              className="rounded-t-lg w-full h-48 object-cover"
+              className="rounded-t-lg w-full h-48 object-cover "
             />
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2 text-blue-600 dark:text-amber-300 transition-colors duration-300">
