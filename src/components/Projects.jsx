@@ -3,12 +3,12 @@ import React from "react";
 const Projects = () => {
   const projects = [
     {
-      title: "Portfolio Website",
+      title: "My Portfolio Website",
       description:
-        "A personal portfolio website to showcase my skills and projects.",
-      image: "/src/assets/portfolio-thumbnail.jpg", // Replace with your image path
-      demoLink: "https://your-portfolio-demo-link.com",
-      codeLink: "https://github.com/your-portfolio-repo",
+        "My personal portfolio website to showcase my skills and projects.",
+      image: "/portfolio.png", // Replace with your image path
+      demoLink: "https://yaferdev.vercel.app/",
+      codeLink: "https://github.com/yaferdln/YaferDev.git",
     },
     {
       title: "E-Commerce Store",
