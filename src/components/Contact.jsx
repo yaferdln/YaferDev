@@ -2,7 +2,7 @@ import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // Import the image from the assets folder
-import shakeImage from "../assets/shake.jpg"; // Correct relative path
+import shakeImage from "/shake.jpg"; // Correct relative path
 
 const Contact = () => {
   return (

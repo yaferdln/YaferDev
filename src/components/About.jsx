@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import profileImage from "/yafer.jpg";
 
 const About = () => {
   useEffect(() => {
@@ -54,7 +55,7 @@ const About = () => {
       >
         <div className="rounded-t-lg flex flex-col items-center justify-between">
           <img
-            src="./src/assets/yafer.jpg"
+            src={profileImage}
             alt="Yafer Profile"
             className="rounded-full h-30 w-30 mt-6 border-4 border-blue-600 dark:border-amber-300 transition-colors duration-300 shadow-lg"
           />

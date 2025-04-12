@@ -52,7 +52,7 @@ const Hero = () => {
         {/* Unique Button */}
         <button
           className="px-6 py-3 text-lg font-semibold text-neutral-50 bg-blue-600 
-             hover:bg-blue-800 dark:text-neutral-950 dark:bg-amber-300 hover:scale-110 transition duration-300"
+             hover:bg-blue-800 dark:text-neutral-950 dark:bg-amber-300 dark:hover:bg-amber-400 hover:scale transition duration-300"
           data-aos="zoom-in-up"
           onClick={() =>
             window.open("https://your-resume-or-portfolio-link.com", "_blank")
