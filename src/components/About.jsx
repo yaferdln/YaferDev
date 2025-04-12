@@ -60,20 +60,20 @@ const About = () => {
             className="rounded-full h-30 w-30 mt-6 border-4 border-blue-600 dark:border-amber-300 transition-colors duration-300 shadow-lg"
           />
           <div className="profile-section mt-4">
-            <h4>
-              <strong>Name:</strong> Yafer De Leon
+            <h4 className="pl-2 mb-4 ">
+              <em>Name:</em> Yafer De Leon
             </h4>
-            <h4>
-              <strong>Address:</strong> Quezon City, Philippines
+            <h4 className="pl-2 mb-4 ">
+              <em>Address:</em> Quezon City, Philippines
             </h4>
-            <h4>
-              <strong>Age:</strong> 27
+            <h4 className="pl-2 mb-4 ">
+              <em>Age:</em> 27
             </h4>
-            <h4>
-              <strong>Status:</strong> Single
+            <h4 className="pl-2 mb-4 ">
+              <em>Status:</em> Single
             </h4>
-            <h4>
-              <strong>Email:</strong> deleonyafer@gmail.com
+            <h4 className="pl-2 mb-4 ">
+              <em>Email:</em> deleonyafer@gmail.com
             </h4>
 
             <h2 className="text-center mt-8">

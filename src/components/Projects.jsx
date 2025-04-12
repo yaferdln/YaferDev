@@ -26,6 +26,14 @@ const Projects = () => {
       demoLink: "https://yaferdln.github.io/Animated-Image-Gallery/",
       codeLink: "https://github.com/yaferdln/Animated-Image-Gallery.git",
     },
+    {
+      title: "Icon Neon Hover Effect",
+      description:
+        "Stunning neon hover effect for icons, built using HTML and CSS",
+      image: "/projects/yaferdln.github.io_Icon-Neon-Hover-Effect.png", // Replace with your image path
+      demoLink: "https://yaferdln.github.io/Icon-Neon-Hover-Effect/",
+      codeLink: "https://github.com/yaferdln/Icon-Neon-Hover-Effect.git",
+    },
   ];
 
   return (
