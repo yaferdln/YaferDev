@@ -5,26 +5,26 @@ const Projects = () => {
     {
       title: "My Portfolio Website",
       description:
-        "My personal portfolio website to showcase my skills and projects.",
+        "My personal portfolio website built with ReactJS and TailwindCSS to showcase my skills and projects.",
       image: "/portfolio.png", // Replace with your image path
       demoLink: "https://yaferdev.vercel.app/",
       codeLink: "https://github.com/yaferdln/YaferDev.git",
     },
     {
-      title: "E-Commerce Store",
+      title: "Portfolio UI",
       description:
-        "A fully functional e-commerce store with cart and payment integration.",
-      image: "/src/assets/ecommerce-thumbnail.jpg", // Replace with your image path
-      demoLink: "https://your-ecommerce-demo-link.com",
-      codeLink: "https://github.com/your-ecommerce-repo",
+        "A simple portfolio UI template built with using only HTML and CSS.",
+      image: "/projects/yaferdln.github.io_Profle-Card-UI.png", // Replace with your image path
+      demoLink: "https://yaferdln.github.io/Profle-Card-UI/",
+      codeLink: "https://github.com/yaferdln/Profle-Card-UI.git",
     },
     {
-      title: "Blog Platform",
+      title: "Animated Image Gallery",
       description:
-        "A blog platform where users can create, edit, and delete posts.",
-      image: "/src/assets/blog-thumbnail.jpg", // Replace with your image path
-      demoLink: "https://your-blog-demo-link.com",
-      codeLink: "https://github.com/your-blog-repo",
+        "Basic Image gallery with hover effects and animations, built using HTML, CSS",
+      image: "/projects/yaferdln.github.io_Animated-Image-Gallery.png", // Replace with your image path
+      demoLink: "https://yaferdln.github.io/Animated-Image-Gallery/",
+      codeLink: "https://github.com/yaferdln/Animated-Image-Gallery.git",
     },
   ];
 
