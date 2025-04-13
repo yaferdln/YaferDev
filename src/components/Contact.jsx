@@ -1,36 +1,66 @@
 import React from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-// Import the image from the assets folder
-import shakeImage from "/shake.jpg"; // Correct relative path
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative h-[80vh]">
-      {/* Background Image */}
-      <img
-        src={shakeImage} // Use the imported image
-        alt="Parallax Background"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+    <section
+      id="contact"
+      className="min-h-screen p-6 pt-16 flex flex-col items-center justify-center gap-8"
+    >
+      {/* Card */}
+      <div
+        className="max-w-3xl w-full p-6 bg-neutral-50 dark:bg-slate-900 rounded-lg shadow-lg transition-colors duration-300 flex flex-col md:flex-row items-center gap-6"
+        data-aos="fade-up"
+      >
+        {/* Left Section (Button) */}
+        <div className="w-full md:w-1/5 flex justify-center">
+          <button
+            className="px-4 py-4 md:px-8 text-sm md:text-lg md:font-semibold text-neutral-50 dark:text-neutral-900 bg-blue-600 dark:bg-amber-300 shadow-lg hover:scale-105 transition duration-300 cursor-pointer"
+            data-aos="zoom"
+            onClick={() =>
+              window.open(
+                "https://docs.google.com/forms/d/e/1FAIpQLSe70qGikNwWiwVwRC0UsZ1ZTBIVwR3az7-6_HHO-woaVRoTVA/viewform?usp=header",
+                "_blank"
+              )
+            }
+          >
+            Let's Work Together
+          </button>
+        </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+        {/* Right Section (Contact Details) */}
+        <div className="w-full md:w-4/5">
+          <h3 className="text-lg md:text-xl font-bold text-blue-600 dark:text-amber-300 mg-2 md:mb-4">
+            Yafer De Leon
+          </h3>
+          <p className="text-sm md:text-base text-neutral-900 dark:text-neutral-50">
+            <strong>Email:</strong> deleonyafer@gmail.com
+          </p>
+          <p className="text-sm md:text-base text-neutral-900 dark:text-neutral-50">
+            <strong>Mobile:</strong> 09128023499
+          </p>
+          <p className="text-sm md:text-base text-neutral-900 dark:text-neutral-50">
+            <strong>Address:</strong> Quezon City, Philippines
+          </p>
+        </div>
+      </div>
 
-      {/* Content */}
-      <div className="relative z-10 flex items-center justify-center h-full">
-        <button
-          className="px-8 py-4 text-lg font-semibold text-neutral-50 bg-blue-600 dark:bg-amber-300 dark:text-neutral-950 rounded-lg shadow-lg hover:scale-105 transition duration-300 cursor-pointer"
-          data-aos="zoom"
-          onClick={() =>
-            window.open(
-              "https://docs.google.com/forms/d/e/1FAIpQLSe70qGikNwWiwVwRC0UsZ1ZTBIVwR3az7-6_HHO-woaVRoTVA/viewform?usp=header",
-              "_blank"
-            )
-          }
+      {/* Interactive Map */}
+      <div className="w-full max-w-3xl h-64 rounded-lg overflow-hidden shadow-lg">
+        <MapContainer
+          center={[14.645121069109344, 120.99317193031311]} // Replace with your latitude and longitude
+          zoom={10}
+          style={{ height: "100%", width: "100%" }}
         >
-          Let's Work Together
-        </button>
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          />
+          <Marker position={[14.645121069109344, 120.99317193031311]}>
+            <Popup>Yafer's Home</Popup>
+          </Marker>
+        </MapContainer>
       </div>
     </section>
   );

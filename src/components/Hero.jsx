@@ -14,20 +14,24 @@ const Hero = () => {
 
   return (
     <section
-      className="min-h-screen flex flex-col md:flex-row p-6 items-center justify-center"
+      id="hero"
+      className="min-h-screen flex flex-col p-6 items-center justify-center pt-16"
       data-aos="fade-up"
     >
       <div className="w-full text-center">
         {/* Hero Title */}
         <h1
-          className="text-5xl md:text-8xl font-extrabold mb-6"
+          className="text-6xl md:text-8xl font-extrabold mb-6"
           data-aos="fade-down"
         >
           YaferDev
         </h1>
 
         {/* Typewriter Effect */}
-        <p className="text-4xl font-bold text-center mb-6" data-aos="fade-down">
+        <p
+          className="text-xl md:text-3xl font-bold text-center mb-6"
+          data-aos="fade-down"
+        >
           I'm Yafer{" "}
           <span className="text-blue-600 dark:text-amber-300  transition-colors duration-300">
             <Typewriter
@@ -51,7 +55,7 @@ const Hero = () => {
 
         {/* Unique Button */}
         <button
-          className="px-6 py-3 text-lg font-semibold text-neutral-50 bg-blue-600 
+          className="px-3 py-3 md:px-6 md:py-3 text-sm md:text-lg md:font-semibold text-neutral-50 bg-blue-600 
              hover:bg-blue-800 dark:text-neutral-950 dark:bg-amber-300 dark:hover:bg-amber-400 hover:scale-105 transition duration-300"
           data-aos="zoom-in-up"
           onClick={() =>

@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   const links = [
-    { href: "#home", label: "Home" },
+    { href: "#hero", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#services", label: "Services" },
     { href: "#skills", label: "Skills" },
@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full flex items-center justify-between p-4 bg-neutral-50 dark:bg-slate-900 transition-colors duration-300 shadow-md z-50">
       {/* Logo */}
-      <h1 className="text-2xl font-bold text-blue-600 dark:text-amber-300 transition-colors duration-300">
+      <h1 className="text-xl md:font-bold text-blue-600 dark:text-amber-300 transition-colors duration-300">
         YaferDev
       </h1>
 

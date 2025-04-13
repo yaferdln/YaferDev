@@ -7,6 +7,7 @@ import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
+import BackToTopButton from "./components/BackToTop.jsx";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Projects />
       <Contact />
       <Footer />
+      <BackToTopButton />
     </div>
   );
 };

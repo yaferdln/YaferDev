@@ -15,38 +15,38 @@ const About = () => {
       platform: "Facebook",
       url: "https://www.facebook.com/yaferdeleon",
       iconClass: "bx bxl-facebook",
-      colorClass: "text-blue-600",
+      colorClass: "hover:text-blue-600",
     },
     {
       platform: "Instagram",
       url: "https://www.instagram.com/yaferdln/",
       iconClass: "bx bxl-instagram",
-      colorClass: "text-pink-500",
+      colorClass: "hover:text-pink-500",
     },
     {
       platform: "Twitter",
       url: "https://x.com/yafercrypto",
       iconClass: "bx bxl-twitter",
-      colorClass: "text-blue-500",
+      colorClass: "hover:text-blue-500",
     },
     {
       platform: "GitHub",
       url: "https://github.com/yaferdln",
       iconClass: "bx bxl-github",
-      colorClass: "text-gray-800 dark:text-neutral-200",
+      colorClass: "hover:text-gray-800 md:dark:hover:text-white",
     },
     {
       platform: "TikTok",
       url: "https://www.tiktok.com/@yafercrypto",
       iconClass: "bx bxl-tiktok",
-      colorClass: "text-black dark:text-neutral-100",
+      colorClass: "hover:text-black",
     },
   ];
 
   return (
     <section
       id="about"
-      className="min-h-screen p-6 flex flex-col md:flex-row items-center justify-center gap-8"
+      className="min-h-screen p-6 flex flex-col md:flex-row items-center justify-center gap-8 pt-16"
     >
       {/* Left Column */}
       <div
@@ -59,7 +59,7 @@ const About = () => {
             alt="Yafer Profile"
             className="rounded-full h-30 w-30 mt-6 border-4 border-blue-600 dark:border-amber-300 transition-colors duration-300 shadow-lg"
           />
-          <div className="profile-section mt-4">
+          <div className="profile-section mt-4 text-center md:text-left text-sm md:text-base">
             <h4 className="pl-2 mb-4 ">
               <em>Name:</em> Yafer De Leon
             </h4>
@@ -88,7 +88,7 @@ const About = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.platform}
-                  className={`text-2xl cursor-pointer transition-colors duration-300 ${link.colorClass}`}
+                  className={`text-2xl text-gray-900 dark:text-gray-400 hover:scale-150 transition-transform cursor-pointer ${link.colorClass}`}
                 >
                   <i className={link.iconClass}></i>
                 </a>
@@ -103,10 +103,10 @@ const About = () => {
         className="w-full md:w-2/3 h-auto bg-neutral-50 dark:bg-slate-900 transition-colors duration-300 rounded-lg p-6"
         data-aos="fade-left"
       >
-        <h2 className="text-2xl font-bold mb-2 text-blue-600 dark:text-amber-300 transition-colors duration-300 uppercase text-center">
+        <h2 className="text-2xl md:text-4xl font-bold mb-6 text-blue-600 dark:text-amber-300 transition-colors duration-300 uppercase text-center">
           Who's behind the code?
         </h2>
-        <p className="leading-relaxed mb-4">
+        <p className="leading-relaxed mb-4 text-sm md:text-base">
           Hi, I'm Yafer, a passionate Web Developer with a background in IT
           Support. I have two years of experience as an IT Support Assistant at
           the Manila International Airport Authority, where I developed strong
@@ -115,14 +115,14 @@ const About = () => {
           transition into a full-time Web Developer role, focusing on building
           modern, user-friendly applications.
         </p>
-        <p className="leading-relaxed mb-4">
+        <p className="leading-relaxed mb-4 text-sm md:text-base">
           I’m always learning and keeping up with the latest web technologies to
           create high-quality, efficient projects. Currently, I’m diving deeper
           into React and Tailwind CSS while also learning Node.js and Express.js
           to expand my backend development skills. These tools allow me to build
           scalable and efficient applications that meet modern web standards.
         </p>
-        <p className="leading-relaxed">
+        <p className="leading-relaxed mb-4 text-sm md:text-base">
           My ultimate goal is to become a full-stack developer capable of
           building end-to-end solutions. I believe in continuous learning and am
           excited to grow in this field. With a strong foundation in both

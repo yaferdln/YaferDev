@@ -44,12 +44,12 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="min-h-screen p-6">
+    <section id="services" className="min-h-screen p-6 pt-16">
       <div className="text-center mb-12" data-aos="fade-up">
-        <h2 className="text-4xl font-bold text-blue-600 dark:text-amber-300 transition-colors duration-300 uppercase">
+        <h2 className="text-2xl md:text-4xl font-bold text-blue-600 dark:text-amber-300 transition-colors duration-300 uppercase">
           Services I Offer
         </h2>
-        <p className="mt-4 text-lg">
+        <p className="mt-4 text-sm md:text-lg">
           Here are the services I provide to help businesses and individuals
           achieve their digital goals with high-quality web solutions.
         </p>
@@ -67,10 +67,12 @@ const Services = () => {
             <div className="flex items-center justify-center mb-4 text-4xl text-blue-600 dark:text-amber-300 transition-colors duration-300">
               <i className={service.icon}></i>
             </div>
-            <h3 className="text-xl font-bold text-center mb-2">
+            <h3 className="text-lg md:text-xl font-semibold md:font-bold text-center mb-2">
               {service.title}
             </h3>
-            <p className="text-center text-sm">{service.description}</p>
+            <p className="text-center text-sm md:text-md">
+              {service.description}
+            </p>
           </div>
         ))}
       </div>
