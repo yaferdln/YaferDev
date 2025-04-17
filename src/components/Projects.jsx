@@ -34,6 +34,35 @@ const Projects = () => {
       demoLink: "https://yaferdln.github.io/Icon-Neon-Hover-Effect/",
       codeLink: "https://github.com/yaferdln/Icon-Neon-Hover-Effect.git",
     },
+    {
+      title: "Dice Roller",
+      description: "Simple dice roller using Javascript",
+      image: "/projects/diceroller.png", // Replace with your image path
+      demoLink: "https://yaferdln.github.io/Dice-Roller/",
+      codeLink: "https://github.com/yaferdln/Dice-Roller.git",
+    },
+    {
+      title: "Quiz App",
+      description: "Quiz App using javascript",
+      image: "/projects/quizapp.png", // Replace with your image path
+      demoLink: "https://yaferdln.github.io/Quiz-App/",
+      codeLink: "https://github.com/yaferdln/Quiz-App.git",
+    },
+    {
+      title: "Number Guessing Game",
+      description: "Number guessing game using Javascript",
+      image: "/projects/numberguessinggame.png", // Replace with your image path
+      demoLink: "https://yaferdln.github.io/Number-Guessing-Game/",
+      codeLink: "https://github.com/yaferdln/Number-Guessing-Game.git",
+    },
+    {
+      title: "Lyric Sync Display",
+      description:
+        "Sync lyrics like spotify while playing a song using Javascript",
+      image: "/projects/lyricsync.png", // Replace with your image path
+      demoLink: "https://yaferdln.github.io/Lyrics-Sync-Display/",
+      codeLink: "https://github.com/yaferdln/Lyrics-Sync-Display.git",
+    },
   ];
 
   return (
