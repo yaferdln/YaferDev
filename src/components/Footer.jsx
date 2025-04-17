@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
           {/* Logo and Tagline */}
           <div className="text-center md:text-left mb-4 md:mb-0">
-            <h2 className="text-2xl md:font-bold mb-4 md:mb-0 text-blue-600 dark:text-amber-300 transition-colors duration-300">
+            <h2 className="text-2xl md:font-bold mb-4 md:mb-0 header transition-colors duration-300">
               YaferDev
             </h2>
             <p className="text-xs md:text-sm">
@@ -57,7 +57,7 @@ const Footer = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${link.colorClass} text-2xl text-gray-900 dark:text-gray-400 hover:scale-150 transition-transform cursor-pointer`}
+                className={`${link.colorClass} text-2xl link hover:scale-150 transition-transform cursor-pointer`}
                 aria-label={link.platform}
               >
                 <i className={`${link.iconClass} text-xl md:text-2xl`}></i>

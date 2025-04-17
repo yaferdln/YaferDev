@@ -10,13 +10,13 @@ const Contact = () => {
     >
       {/* Card */}
       <div
-        className="max-w-3xl w-full p-6 bg-neutral-50 dark:bg-slate-900 rounded-lg shadow-lg transition-colors duration-300 flex flex-col md:flex-row items-center gap-6"
+        className="max-w-3xl w-full p-6 card shadow-lg transition-colors duration-300 flex flex-col md:flex-row items-center gap-6"
         data-aos="fade-up"
       >
         {/* Left Section (Button) */}
         <div className="w-full md:w-1/5 flex justify-center">
           <button
-            className="px-4 py-4 md:px-8 text-sm md:text-lg md:font-semibold text-neutral-50 dark:text-neutral-900 bg-blue-600 dark:bg-amber-300 shadow-lg hover:scale-105 transition duration-300 cursor-pointer"
+            className="px-4 py-4 md:px-8 text-sm md:text-lg md:font-semibold button shadow-lg hover:scale-105 transition duration-300 cursor-pointer"
             data-aos="zoom"
             onClick={() =>
               window.open(
@@ -31,16 +31,16 @@ const Contact = () => {
 
         {/* Right Section (Contact Details) */}
         <div className="w-full md:w-4/5">
-          <h3 className="text-lg md:text-xl font-bold text-blue-600 dark:text-amber-300 mg-2 md:mb-4">
+          <h3 className="text-lg md:text-xl font-bold header mg-2 md:mb-4">
             Yafer De Leon
           </h3>
-          <p className="text-sm md:text-base text-neutral-900 dark:text-neutral-50">
+          <p className="text-sm md:text-base">
             <strong>Email:</strong> deleonyafer@gmail.com
           </p>
-          <p className="text-sm md:text-base text-neutral-900 dark:text-neutral-50">
+          <p className="text-sm md:text-base">
             <strong>Mobile:</strong> 09128023499
           </p>
-          <p className="text-sm md:text-base text-neutral-900 dark:text-neutral-50">
+          <p className="text-sm md:text-base">
             <strong>Address:</strong> Quezon City, Philippines
           </p>
         </div>

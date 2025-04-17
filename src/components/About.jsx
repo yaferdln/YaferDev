@@ -50,60 +50,31 @@ const About = () => {
     >
       {/* Left Column */}
       <div
-        className="w-full md:w-1/3 h-auto bg-neutral-50 dark:bg-slate-900 transition-colors duration-300 rounded-lg p-6"
+        className="w-full md:w-1/3 h-auto card transition-colors duration-300 p-6 shadow-lg"
         data-aos="fade-right"
       >
         <div className="rounded-t-lg flex flex-col items-center justify-between">
           <img
             src={profileImage}
             alt="Yafer Profile"
-            className="rounded-full h-30 w-30 mt-6 border-4 border-blue-600 dark:border-amber-300 transition-colors duration-300 shadow-lg"
+            className="rounded-full h-30 w-30 mt-6 transition-colors duration-300"
           />
           <div className="profile-section mt-4 text-center md:text-left text-sm md:text-base">
-            <h4 className="pl-2 mb-4 ">
-              <em>Name:</em> Yafer De Leon
-            </h4>
-            <h4 className="pl-2 mb-4 ">
-              <em>Address:</em> Quezon City, Philippines
-            </h4>
-            <h4 className="pl-2 mb-4 ">
-              <em>Age:</em> 27
-            </h4>
-            <h4 className="pl-2 mb-4 ">
-              <em>Status:</em> Single
-            </h4>
-            <h4 className="pl-2 mb-4 ">
-              <em>Email:</em> deleonyafer@gmail.com
-            </h4>
-
-            <h2 className="text-center mt-8">
-              Visit my socials or let's connect!
-            </h2>
-            <hr className="border-blue-600 dark:border-amber-300 transition-colors duration-300 mt-4 w-80 mx-auto" />
-            <div className="profile-footer mt-4 flex justify-center gap-6">
-              {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.platform}
-                  className={`text-2xl text-gray-900 dark:text-gray-400 hover:scale-150 transition-transform cursor-pointer ${link.colorClass}`}
-                >
-                  <i className={link.iconClass}></i>
-                </a>
-              ))}
-            </div>
+            <h4 className="pl-2 mb-4 ">Name: Yafer De Leon</h4>
+            <h4 className="pl-2 mb-4 ">Address: Quezon City, Philippines</h4>
+            <h4 className="pl-2 mb-4 ">Age: 27</h4>
+            <h4 className="pl-2 mb-4 ">Status: Single</h4>
+            <h4 className="pl-2 mb-4 ">Email: deleonyafer@gmail.com</h4>
           </div>
         </div>
       </div>
 
       {/* Right Column */}
       <div
-        className="w-full md:w-2/3 h-auto bg-neutral-50 dark:bg-slate-900 transition-colors duration-300 rounded-lg p-6"
+        className="w-full md:w-2/3 h-auto card transition-colors duration-300 p-6 shadow-lg"
         data-aos="fade-left"
       >
-        <h2 className="text-2xl md:text-4xl font-bold mb-6 text-blue-600 dark:text-amber-300 transition-colors duration-300 uppercase text-center">
+        <h2 className="text-2xl md:text-4xl header transition-colors duration-300 uppercase text-center mb-8">
           Who's behind the code?
         </h2>
         <p className="leading-relaxed mb-4 text-sm md:text-base">

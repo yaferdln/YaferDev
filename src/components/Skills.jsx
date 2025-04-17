@@ -59,7 +59,7 @@ const Skills = () => {
   return (
     <section id="skills" className="min-h-screen p-6 pt-16">
       <div className="text-center mb-12" data-aos="fade-up">
-        <h2 className="text-2xl md:text-4xl font-bold text-blue-600 dark:text-amber-300 uppercase">
+        <h2 className="text-2xl md:text-4xl font-bold header uppercase">
           My Skills
         </h2>
         <p className="mt-4 text-sm md:text-lg">
@@ -72,11 +72,11 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="bg-neutral-50 dark:bg-slate-900 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="card p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
             data-aos="zoom-in"
             data-aos-delay={index * 100}
           >
-            <h3 className="text-lg md:text-2xl font-bold mb-8 text-center text-blue-600 dark:text-amber-300">
+            <h3 className="text-lg md:text-2xl font-bold mb-8 text-center header">
               {skill.category}
             </h3>
             <div className="flex flex-wrap gap-6 md:gap-10 justify-center">
@@ -87,7 +87,7 @@ const Skills = () => {
                   data-aos="zoom-in-down"
                   data-aos-delay={index * 300}
                 >
-                  <div className="text-2xl md:text-4xl p-4 bg-neutral-200 dark:bg-slate-700 rounded-lg shadow-md transition-transform transform group-hover:scale-110">
+                  <div className="text-2xl md:text-4xl p-4 bg-[#e2e8f0] dark:bg-[#1a3a4a]  shadow-md transition-transform transform group-hover:scale-110">
                     {item.icon}
                   </div>
                   <span className="md:mt-2 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -27,7 +27,7 @@ export default function BackToTopButton() {
     showButton && (
       <button
         onClick={scrollToTop}
-        className="fixed bottom-4 right-4 z-50 bg-blue-600 dark:bg-amber-300 text-white dark:text-neutral-900 p-3 focus:outline-none md:hidden"
+        className="fixed bottom-4 right-4 z-50 button p-3 focus:outline-none md:hidden"
         aria-label="Back to top"
       >
         <CircleArrowUp />

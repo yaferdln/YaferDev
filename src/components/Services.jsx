@@ -46,7 +46,7 @@ const Services = () => {
   return (
     <section id="services" className="min-h-screen p-6 pt-16">
       <div className="text-center mb-12" data-aos="fade-up">
-        <h2 className="text-2xl md:text-4xl font-bold text-blue-600 dark:text-amber-300 transition-colors duration-300 uppercase">
+        <h2 className="text-2xl md:text-4xl font-bold header transition-colors duration-300 uppercase">
           Services I Offer
         </h2>
         <p className="mt-4 text-sm md:text-lg">
@@ -59,12 +59,12 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-neutral-50 dark:bg-slate-900 hover:bg-gray-200 dark:hover:bg-slate-800 rounded-lg p-6 shadow-lg 
+            className="card p-6 shadow-lg 
                        hover:shadow-2xl/70 transition duration-300"
             data-aos="zoom-in"
             data-aos-delay={index * 100}
           >
-            <div className="flex items-center justify-center mb-4 text-4xl text-blue-600 dark:text-amber-300 transition-colors duration-300">
+            <div className="flex items-center justify-center mb-4 text-4xl icon transition-colors duration-300">
               <i className={service.icon}></i>
             </div>
             <h3 className="text-lg md:text-xl font-semibold md:font-bold text-center mb-2">

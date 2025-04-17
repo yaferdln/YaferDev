@@ -5,13 +5,18 @@ import "aos/dist/aos.css";
 
 const Hero = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true, // Animation happens only once
-    });
-    AOS.refresh(); // Refresh AOS to ensure animations are applied
-  }, []);
+    const timer = setTimeout(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
 
+      // 👇 Refresh AOS so it recalculates positions after initial render
+      AOS.refresh();
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <section
       id="hero"
@@ -21,27 +26,26 @@ const Hero = () => {
       <div className="w-full text-center">
         {/* Hero Title */}
         <h1
-          className="text-6xl md:text-8xl font-extrabold mb-6"
-          data-aos="fade-down"
+          className="text-4xl md:text-6xl header font-extrabold mb-6"
+          data-aos="slide-right"
         >
-          YaferDev
+          Hi I'm Yafer
         </h1>
 
         {/* Typewriter Effect */}
         <p
-          className="text-xl md:text-3xl font-bold text-center mb-6"
-          data-aos="fade-down"
+          className="text-xl md:text-4xl font-bold text-center mb-6"
+          data-aos="fade-up"
         >
-          I'm Yafer{" "}
-          <span className="text-blue-600 dark:text-amber-300  transition-colors duration-300">
+          <span className="type-writer transition-colors duration-300">
             <Typewriter
               words={[
-                "a Web Developer",
-                "a Tech Support",
-                "a PC Builder",
-                "a Content Creator",
-                "an Airdrop Hunter",
-                "a Crypto Enthusiast",
+                "Web Developer",
+                "Tech Support",
+                "PC Builder",
+                "Content Creator",
+                "Airdrop Hunter",
+                "Crypto Enthusiast",
               ]}
               loop
               cursor
@@ -54,16 +58,15 @@ const Hero = () => {
         </p>
 
         {/* Unique Button */}
-        <button
-          className="px-3 py-3 md:px-6 md:py-3 text-sm md:text-lg md:font-semibold text-neutral-50 bg-blue-600 
-             hover:bg-blue-800 dark:text-neutral-950 dark:bg-amber-300 dark:hover:bg-amber-400 hover:scale-105 transition duration-300"
-          data-aos="zoom-in-up"
-          onClick={() =>
-            window.open("https://your-resume-or-portfolio-link.com", "_blank")
-          }
-        >
-          View My Work
-        </button>
+        <a href="#projects">
+          <button
+            className="button px-2 py-1 md:px-4 md:py-3 text-sm md:text-md md:font-semibold
+      hover:scale-105 transition duration-300"
+            data-aos="zoom-in-up"
+          >
+            View My Work
+          </button>
+        </a>
       </div>
     </section>
   );

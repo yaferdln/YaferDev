@@ -1,25 +1,41 @@
 @import "tailwindcss";
+@config "../tailwind.config.js";
 
-* {
-  font-family: Poppins, sans-serif;
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  @apply text-light-header dark:text-dark-header;
+}
+.button {
+  @apply bg-light-button text-light-base dark:bg-dark-button dark:text-dark-base;
+}
+.type-writer {
+  @apply text-light-typewriter dark:text-dark-typewriter;
+}
+.p {
+}
+.link {
+  @apply text-light-link dark:text-dark-link;
+}
+.icon {
+  @apply text-light-link dark:text-dark-link;
+}
+.hr {
+  @apply border-light-border dark:border-dark-border;
+}
+.card {
+  @apply bg-light-card dark:bg-dark-card;
+}
+.mobile-menu {
+  @apply bg-light-mobilemenu dark:bg-dark-mobilemenu;
+}
+.navbar {
+  @apply bg-light-navbar dark:bg-dark-navbar;
 }
 html,
 body {
   scroll-behavior: smooth;
-}
-@custom-variant dark (&:where(.dark, .dark *));
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-[data-aos="spin"] {
-  animation-name: spin;
-  animation-duration: 1s;
-  animation-timing-function: linear;
 }
