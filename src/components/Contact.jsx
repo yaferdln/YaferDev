@@ -24,23 +24,18 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center p-6 pt-20 bg-gray-100 dark:bg-gray-900"
+      className="min-h-screen flex items-center justify-center p-6 pt-20"
     >
       <form
         onSubmit={(e) => handleSubmit(e)}
-        className="w-full max-w-xl bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 space-y-6"
+        className="w-full max-w-xl card  rounded-2xl shadow-xl p-8 space-y-6"
         data-aos="zoom-in"
       >
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white">
-          Contact Me
-        </h2>
+        <h2 className="text-3xl font-bold text-center header">Contact Me</h2>
 
         {/* Name Field */}
         <div>
-          <label
-            htmlFor="name"
-            className="block text-sm text-gray-700 dark:text-gray-300 mb-1"
-          >
+          <label htmlFor="name" className="block text-sm mb-1">
             Name
           </label>
           <input
@@ -56,10 +51,7 @@ const Contact = () => {
 
         {/* Email Field */}
         <div>
-          <label
-            htmlFor="email"
-            className="block text-sm text-gray-700 dark:text-gray-300 mb-1"
-          >
+          <label htmlFor="email" className="block text-sm mb-1">
             Email Address
           </label>
           <input
@@ -81,10 +73,7 @@ const Contact = () => {
 
         {/* Message Field */}
         <div>
-          <label
-            htmlFor="message"
-            className="block text-sm text-gray-700 dark:text-gray-300 mb-1"
-          >
+          <label htmlFor="message" className="block text-sm mb-1">
             Message
           </label>
           <textarea
@@ -108,7 +97,7 @@ const Contact = () => {
         <button
           type="submit"
           disabled={state.submitting}
-          className={`w-full py-2 px-4 rounded-md font-semibold text-white transition duration-300 ${
+          className={`w-full py-2 px-4 rounded-md font-semibold transition duration-300 button ${
             state.submitting
               ? "bg-blue-300 cursor-not-allowed"
               : "bg-blue-600 hover:bg-blue-700"
