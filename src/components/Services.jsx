@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -44,7 +44,10 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="min-h-screen p-6 pt-16">
+    <section
+      id="services"
+      className="min-h-screen max-w-6xl mx-auto  p-6 pt-16"
+    >
       <div className="text-center mb-12" data-aos="fade-up">
         <h2 className="text-2xl md:text-4xl font-bold header transition-colors duration-300 uppercase">
           Services I Offer

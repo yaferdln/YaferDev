@@ -1,67 +1,129 @@
-import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+import { useForm, ValidationError } from "@formspree/react";
+import { useState, useEffect } from "react";
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("movdvqny"); // <-- Add your Formspree Form ID here
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  useEffect(() => {
+    if (state.succeeded) {
+      // Reset form data when submission is successful
+      setFormData({ name: "", email: "", message: "" });
+    }
+  }, [state.succeeded]); // Trigger when the submission is successful
+
   return (
     <section
       id="contact"
-      className="min-h-screen p-6 pt-16 flex flex-col items-center justify-center gap-8"
+      className="min-h-screen flex items-center justify-center p-6 pt-20 bg-gray-100 dark:bg-gray-900"
     >
-      {/* Card */}
-      <div
-        className="max-w-3xl w-full p-6 card shadow-lg transition-colors duration-300 flex flex-col md:flex-row items-center gap-6"
-        data-aos="fade-up"
+      <form
+        onSubmit={(e) => handleSubmit(e)}
+        className="w-full max-w-xl bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 space-y-6"
+        data-aos="zoom-in"
       >
-        {/* Left Section (Button) */}
-        <div className="w-full md:w-1/5 flex justify-center">
-          <button
-            className="px-4 py-4 md:px-8 text-sm md:text-lg md:font-semibold button shadow-lg hover:scale-105 transition duration-300 cursor-pointer"
-            data-aos="zoom"
-            onClick={() =>
-              window.open(
-                "https://docs.google.com/forms/d/e/1FAIpQLSe70qGikNwWiwVwRC0UsZ1ZTBIVwR3az7-6_HHO-woaVRoTVA/viewform?usp=header",
-                "_blank"
-              )
-            }
+        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white">
+          Contact Me
+        </h2>
+
+        {/* Name Field */}
+        <div>
+          <label
+            htmlFor="name"
+            className="block text-sm text-gray-700 dark:text-gray-300 mb-1"
           >
-            Let's Work Together
-          </button>
-        </div>
-
-        {/* Right Section (Contact Details) */}
-        <div className="w-full md:w-4/5">
-          <h3 className="text-lg md:text-xl font-bold header mg-2 md:mb-4">
-            Yafer De Leon
-          </h3>
-          <p className="text-sm md:text-base">
-            <strong>Email:</strong> deleonyafer@gmail.com
-          </p>
-          <p className="text-sm md:text-base">
-            <strong>Mobile:</strong> 09128023499
-          </p>
-          <p className="text-sm md:text-base">
-            <strong>Address:</strong> Quezon City, Philippines
-          </p>
-        </div>
-      </div>
-
-      {/* Interactive Map */}
-      <div className="w-full max-w-3xl h-64 rounded-lg overflow-hidden shadow-lg">
-        <MapContainer
-          center={[14.645121069109344, 120.99317193031311]} // Replace with your latitude and longitude
-          zoom={10}
-          style={{ height: "100%", width: "100%" }}
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            Name
+          </label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <Marker position={[14.645121069109344, 120.99317193031311]}>
-            <Popup>Yafer's Home</Popup>
-          </Marker>
-        </MapContainer>
-      </div>
+        </div>
+
+        {/* Email Field */}
+        <div>
+          <label
+            htmlFor="email"
+            className="block text-sm text-gray-700 dark:text-gray-300 mb-1"
+          >
+            Email Address
+          </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <ValidationError
+            prefix="Email"
+            field="email"
+            errors={state.errors}
+            className="text-red-500 text-sm mt-1"
+          />
+        </div>
+
+        {/* Message Field */}
+        <div>
+          <label
+            htmlFor="message"
+            className="block text-sm text-gray-700 dark:text-gray-300 mb-1"
+          >
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            rows="4"
+            className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></textarea>
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+            className="text-red-500 text-sm mt-1"
+          />
+        </div>
+
+        {/* Submit Button */}
+        <button
+          type="submit"
+          disabled={state.submitting}
+          className={`w-full py-2 px-4 rounded-md font-semibold text-white transition duration-300 ${
+            state.submitting
+              ? "bg-blue-300 cursor-not-allowed"
+              : "bg-blue-600 hover:bg-blue-700"
+          }`}
+        >
+          {state.submitting ? "Sending..." : "Send Message"}
+        </button>
+
+        {/* Success Message */}
+        {state.succeeded && (
+          <p className="text-green-500 text-center font-medium mt-4">
+            Thanks for reaching out! I'll get back to you soon 👋
+          </p>
+        )}
+      </form>
     </section>
   );
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -57,7 +56,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="min-h-screen p-6 pt-16">
+    <section id="skills" className="min-h-screen max-w-6xl mx-auto p-6 pt-16">
       <div className="text-center mb-12" data-aos="fade-up">
         <h2 className="text-2xl md:text-4xl font-bold header uppercase">
           My Skills

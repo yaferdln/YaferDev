@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
+import NAVBAR_LINKS from "../constants/navbarLinks";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(() => {
@@ -27,15 +28,6 @@ const Navbar = () => {
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
-
-  const links = [
-    { href: "#hero", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#services", label: "Services" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
-  ];
 
   return (
     <nav className="navbar fixed top-0 left-0 w-full flex items-center justify-between p-4 transition-colors duration-300 shadow-lg z-50">
@@ -80,7 +72,7 @@ const Navbar = () => {
         </button>
 
         {/* Links */}
-        {links.map((link) => (
+        {NAVBAR_LINKS.map((link) => (
           <a
             key={link.href}
             href={link.href}
@@ -94,7 +86,7 @@ const Navbar = () => {
 
       {/* Links for Desktop */}
       <ul className="hidden md:flex items-center space-x-4">
-        {links.map((link) => (
+        {NAVBAR_LINKS.map((link) => (
           <li key={link.href}>
             <a
               href={link.href}

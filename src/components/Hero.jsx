@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -26,7 +26,7 @@ const Hero = () => {
       <div className="w-full text-center">
         {/* Hero Title */}
         <h1
-          className="text-4xl md:text-6xl header font-extrabold mb-6"
+          className="text-4xl md:text-7xl header font-extrabold mb-6"
           data-aos="slide-right"
         >
           Hi I'm Yafer
