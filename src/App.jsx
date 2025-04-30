@@ -12,7 +12,7 @@ import {
 } from "./sections/index.js";
 const App = () => {
   return (
-    <div className="min-h-screen font-jet bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text transition-colors duration-300 overflow-x-hidden">
+    <div className="min-h-screen font-inter bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />

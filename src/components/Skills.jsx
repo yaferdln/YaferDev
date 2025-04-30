@@ -72,24 +72,24 @@ const Skills = () => {
           <div
             key={index}
             className="card p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-            data-aos="zoom-in"
+            data-aos="flip-left"
             data-aos-delay={index * 100}
           >
-            <h3 className="text-lg md:text-2xl font-bold mb-8 text-center header">
+            <h3 className="header text-lg md:text-2xl font-bold mb-8 text-center ">
               {skill.category}
             </h3>
             <div className="flex flex-wrap gap-6 md:gap-10 justify-center">
               {skill.items.map((item, idx) => (
                 <div
                   key={idx}
-                  className="group flex flex-col items-center w-1/8 sm:1/4 md:w-auto"
+                  className="flex flex-col items-center w-1/8 sm:1/4 md:w-auto"
                   data-aos="zoom-in-down"
                   data-aos-delay={index * 300}
                 >
-                  <div className="text-2xl md:text-4xl p-4 bg-[#e2e8f0] dark:bg-[#1a3a4a]  shadow-md transition-transform transform group-hover:scale-110">
+                  <div className="text-2xl md:text-5xl p-4 transition-transform transform hover:scale-110">
                     {item.icon}
                   </div>
-                  <span className="md:mt-2 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="md:mt-2 text-xs text-center">
                     {item.name}
                   </span>
                 </div>

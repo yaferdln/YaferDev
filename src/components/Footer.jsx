@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
           {/* Logo and Tagline */}
           <div className="text-center md:text-left mb-4 md:mb-0">
-            <h2 className="text-2xl md:font-bold mb-4 md:mb-0 header transition-colors duration-300">
+            <h2 className="header text-3xl md:font-bold mb-4 md:mb-0">
               YaferDev
             </h2>
             <p className="text-xs md:text-sm">
@@ -23,7 +23,7 @@ const Footer = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`text-xl ${link.colorClass}`}
+                className={`text-2xl ${link.colorClass}`}
               >
                 <i className={link.iconClass}></i>
               </a>
@@ -33,9 +33,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="text-center text-xs md:text-sm">
-          <p>
-            &copy; {new Date().getFullYear()} YaferDev. All rights reserved.
-          </p>
+          <p>&copy;{new Date().getFullYear()} YaferDev. All rights reserved.</p>
         </div>
       </div>
     </footer>

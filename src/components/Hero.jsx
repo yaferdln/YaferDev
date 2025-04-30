@@ -5,29 +5,18 @@ import "aos/dist/aos.css";
 
 const Hero = () => {
   useEffect(() => {
-    const timer = setTimeout(() => {
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
-
-      // 👇 Refresh AOS so it recalculates positions after initial render
-      AOS.refresh();
-    }, 100);
-
-    return () => clearTimeout(timer);
+    AOS.init({ duration: 1000, once: true });
   }, []);
   return (
     <section
       id="hero"
       className="min-h-screen flex flex-col p-6 items-center justify-center pt-16"
-      data-aos="fade-up"
     >
       <div className="w-full text-center">
         {/* Hero Title */}
         <h1
-          className="text-4xl md:text-7xl header font-extrabold mb-6"
-          data-aos="slide-right"
+          className="header text-4xl md:text-7xl font-extrabold mb-6"
+          data-aos="zoom-in-down"
         >
           Hi I'm Yafer
         </h1>
@@ -35,9 +24,9 @@ const Hero = () => {
         {/* Typewriter Effect */}
         <p
           className="text-xl md:text-4xl font-bold text-center mb-6"
-          data-aos="fade-up"
+          data-aos="zoom-in-up"
         >
-          <span className="type-writer transition-colors duration-300">
+          <span className="type-writer">
             <Typewriter
               words={[
                 "Web Developer",

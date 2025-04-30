@@ -30,11 +30,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar fixed top-0 left-0 w-full flex items-center justify-between p-4 transition-colors duration-300 shadow-lg z-50">
+    <nav className="navbar fixed top-0 left-0 w-full flex items-center justify-between p-4 shadow-lg z-50">
       {/* Logo */}
-      <h1 className="header text-xl md:font-bold transition-colors duration-300">
-        YaferDev
-      </h1>
+      <h1 className="text-xl md:font-bold">YaferDev</h1>
 
       {/* Dark Mode Toggle for Small Screens */}
       <div
@@ -59,7 +57,7 @@ const Navbar = () => {
 
       {/* Full-Screen Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen mobile-menu flex flex-col items-center justify-center space-y-8 z-50 transition-transform duration-300 ${
+        className={`mobile-menu fixed top-0 left-0 w-full h-screen flex flex-col items-center justify-center space-y-8 z-50 transition-transform duration-300 ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -76,7 +74,7 @@ const Navbar = () => {
           <a
             key={link.href}
             href={link.href}
-            className="link text-2xl font-bold uppercase hover:text-blue-600 dark:hover:text-amber-300 transition-colors duration-300"
+            className="link text-xl uppercase"
             onClick={() => setIsMenuOpen(false)} // Close menu on link click
           >
             {link.label}
@@ -90,7 +88,7 @@ const Navbar = () => {
           <li key={link.href}>
             <a
               href={link.href}
-              className="link uppercase hover:text-blue-600 dark:hover:text-amber-300 leading-relaxed font-bold"
+              className="link font-bold uppercase leading-relaxed"
             >
               {link.label}
             </a>

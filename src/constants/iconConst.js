@@ -22,7 +22,7 @@ export const icons = [
   },
   {
     component: () => (
-      <SiExpress title="Express" className="text-gray-300 mx-2" />
+      <SiExpress title="Express" className="text-gray-100 mx-2" />
     ),
   },
   {

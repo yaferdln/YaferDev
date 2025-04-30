@@ -6,34 +6,38 @@
 @tailwind components;
 @tailwind utilities;
 
-.header {
-  @apply text-light-header dark:text-dark-header;
-}
-.button {
-  @apply bg-light-button text-light-base dark:bg-dark-button dark:text-dark-base;
-}
-.type-writer {
-  @apply text-light-typewriter dark:text-dark-typewriter;
-}
-.p {
-}
-.link {
-  @apply text-light-link dark:text-dark-link;
-}
-.icon {
-  @apply text-light-link dark:text-dark-link;
-}
-.hr {
-  @apply border-light-border dark:border-dark-border;
-}
-.card {
-  @apply bg-light-card dark:bg-dark-card;
-}
-.mobile-menu {
-  @apply bg-light-mobilemenu dark:bg-dark-mobilemenu;
-}
-.navbar {
-  @apply bg-light-navbar dark:bg-dark-navbar;
+/* Custom Classes */
+@layer components {
+  .header {
+    @apply text-light-txtheader dark:text-dark-txtheader;
+  }
+  .button {
+    @apply bg-light-buttonbg text-dark-text dark:bg-dark-buttonbg dark:text-light-text;
+  }
+  .type-writer {
+    @apply text-light-text dark:text-dark-text;
+  }
+  .link {
+    @apply text-light-txtlink dark:text-dark-txtlink;
+  }
+  .icon {
+    @apply text-light-text dark:text-dark-text;
+  }
+  .hr {
+    @apply border-light-text dark:border-dark-text;
+  }
+  .card {
+    @apply bg-light-cardbg dark:bg-dark-cardbg;
+  }
+  .custom-container {
+    @apply bg-light-containerbg dark:bg-dark-containerbg;
+  }
+  .mobile-menu {
+    @apply bg-light-navbarbg dark:bg-dark-navbarbg;
+  }
+  .navbar {
+    @apply bg-light-navbarbg dark:bg-dark-navbarbg;
+  }
 }
 html,
 body {

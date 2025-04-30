@@ -21,7 +21,7 @@ export const socialLinks = [
     platform: "GitHub",
     url: "https://github.com/yaferdln",
     iconClass: "bx bxl-github",
-    colorClass: "hover:text-gray-800 md:dark:hover:text-white",
+    colorClass: "hover:text-gray-500 md:dark:hover:text-gray-900",
   },
   {
     platform: "TikTok",
