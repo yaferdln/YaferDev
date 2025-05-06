@@ -31,22 +31,19 @@ const Navbar = () => {
 
   return (
     <nav className="navbar fixed top-0 left-0 w-full flex items-center justify-between p-6 shadow-lg z-50">
-      {/* Logo */}
-      <h1 className="header text-2xl md:font-bold">
-        <a href="/">YaferDev</a>
-      </h1>
-
-      {/* Dark Mode Toggle for Small Screens */}
-      <div
-        className="md:hidden flex items-center space-x-2 cursor-pointer"
-        onClick={toggleDarkMode}
-      >
-        <button className="button p-2 rounded-full">
+      {/* Dark Mode Toggle for Small Screens (moved to the start and ordered first) */}
+      <div className="md:hidden order-first">
+        <button className="button p-2 rounded-full" onClick={toggleDarkMode}>
           {darkMode ? <Sun size={28} /> : <Moon size={28} />}
         </button>
       </div>
 
-      {/* Menu Icon for Mobile */}
+      {/* Logo (will be centered on small screens) */}
+      <h1 className="header text-2xl font-semibold md:font-bold text-center md:text-left">
+        <a href="/">YaferDev</a>
+      </h1>
+
+      {/* Menu Icon for Mobile (remains on the right by default) */}
       <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
@@ -92,7 +89,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      {/* Dark Mode Toggle for Desktop */}
+      {/* Dark Mode Toggle for Desktop (remains on the right) */}
       <div className="hidden md:flex items-center space-x-2 cursor-pointer">
         <button
           className="button rounded-full p-2 hover:scale-110 cursor-pointer"
