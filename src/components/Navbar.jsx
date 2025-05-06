@@ -30,24 +30,20 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar fixed top-0 left-0 w-full flex items-center justify-between p-4 shadow-lg z-50">
+    <nav className="navbar fixed top-0 left-0 w-full flex items-center justify-between p-6 shadow-lg z-50">
       {/* Logo */}
-      <h1 className="text-xl md:font-bold">YaferDev</h1>
+      <h1 className="header text-2xl md:font-bold">
+        <a href="/">YaferDev</a>
+      </h1>
 
       {/* Dark Mode Toggle for Small Screens */}
       <div
         className="md:hidden flex items-center space-x-2 cursor-pointer"
         onClick={toggleDarkMode}
       >
-        {darkMode ? (
-          <>
-            <Sun size={28} />
-          </>
-        ) : (
-          <>
-            <Moon size={28} />
-          </>
-        )}
+        <button className="button p-2 rounded-full">
+          {darkMode ? <Sun size={28} /> : <Moon size={28} />}
+        </button>
       </div>
 
       {/* Menu Icon for Mobile */}
@@ -97,19 +93,13 @@ const Navbar = () => {
       </ul>
 
       {/* Dark Mode Toggle for Desktop */}
-      <div
-        className="hidden md:flex items-center space-x-2 cursor-pointer"
-        onClick={toggleDarkMode}
-      >
-        {darkMode ? (
-          <>
-            <Sun size={28} />
-          </>
-        ) : (
-          <>
-            <Moon size={28} />
-          </>
-        )}
+      <div className="hidden md:flex items-center space-x-2 cursor-pointer">
+        <button
+          className="button rounded-full p-2 hover:scale-110 cursor-pointer"
+          onClick={toggleDarkMode}
+        >
+          {darkMode ? <Sun size={28} /> : <Moon size={28} />}
+        </button>
       </div>
     </nav>
   );

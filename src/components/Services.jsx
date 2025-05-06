@@ -1,15 +1,4 @@
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 const Services = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
-
   const services = [
     {
       icon: "bx bx-code-alt",
@@ -45,12 +34,12 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="min-h-screen max-w-6xl mx-auto p-6 pt-16">
+    <section id="services" className="min-h-screen max-w-6xl mx-auto p-6 pt-25">
       <div className="text-center mb-12" data-aos="fade-up">
-        <h2 className="header text-2xl md:text-4xl font-bold uppercase">
+        <h2 className="header text-2xl md:text-4xl font-bold uppercase text-center sm:text-left">
           Services I Offer
         </h2>
-        <p className="mt-4 text-sm md:text-lg">
+        <p className="mt-4 text-sm md:text-lg text-center sm:text-left">
           Here are the services I provide to help businesses and individuals
           achieve their digital goals with high-quality web solutions.
         </p>
@@ -58,16 +47,11 @@ const Services = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
-          <div
-            key={index}
-            className="card p-6 shadow-lg"
-            data-aos="zoom-in"
-            data-aos-delay={index * 100}
-          >
+          <div key={index} className="card p-6 shadow-lg" data-aos="zoom-in">
             <div className="flex items-center justify-center mb-4 text-4xl">
               <i className={service.icon}></i>
             </div>
-            <h3 className="text-lg md:text-xl font-semibold md:font-bold text-center mb-2">
+            <h3 className="header text-lg  md:text-xl font-semibold md:font-bold text-center mb-2">
               {service.title}
             </h3>
             <p className="text-center text-sm md:text-md">

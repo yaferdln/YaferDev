@@ -16,27 +16,70 @@ const Contact = () => {
 
   useEffect(() => {
     if (state.succeeded) {
-      // Reset form data when submission is successful
       setFormData({ name: "", email: "", message: "" });
     }
-  }, [state.succeeded]); // Trigger when the submission is successful
+  }, [state.succeeded]);
 
   return (
-    <section
-      id="contact"
-      className="min-h-screen flex items-center justify-center p-6 pt-20"
-    >
-      <div className="max-w-6xl mx-auto w-full h-auto flex flex-col justify-center items-center">
-        <h2
-          className="header text-2xl md:text-4xl font-bold text-center mb-8"
-          data-aos="fade-up"
-        >
+    <section id="contact" className="min-h-screen max-w-6xl mx-auto p-6 pt-25">
+      <div className="text-center mb-12" data-aos="fade-up">
+        <h2 className="header text-2xl md:text-4xl font-bold uppercase text-center sm:text-left">
           Get In Touch
         </h2>
+        <p className="mt-4 text-sm md:text-lg text-center sm:text-left">
+          Whether you have a question, an opportunity, or just want to say hi —
+          my inbox is always open. I’ll do my best to get back to you as soon as
+          possible!
+        </p>
+      </div>
+      <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-12">
+        {/* Left Contact Info */}
+        <div className="w-full md:w-1/2 space-y-4" data-aos="fade-right">
+          <h3 className=" text-xl md:text-2xl font-semibold md:font-bold mb-2">
+            Contact Information
+          </h3>
+          <p className="text-xs md:text-sm">
+            Feel free to reach out to me using the form or through the contact
+            details below.
+          </p>
+          <div className="space-y-2">
+            <p>
+              <span className="font-semibold">Email:</span>{" "}
+              <a
+                href="mailto:deleonyafer@gmail.com"
+                className="text-blue-500 hover:underline"
+              >
+                deleonyafer@gmail.com
+              </a>
+            </p>
+            <p>
+              <span className="font-semibold">Mobile:</span>{" "}
+              <a
+                href="tel:+639128023499"
+                className="text-blue-500 hover:underline"
+              >
+                09128023499
+              </a>
+            </p>
+            <p>
+              <span className="font-semibold">LinkedIn:</span>{" "}
+              <a
+                href="https://www.linkedin.com/in/yaferdln/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline"
+              >
+                https://www.linkedin.com/in/yaferdln/
+              </a>
+            </p>
+          </div>
+        </div>
+
+        {/* Right Form */}
         <form
           onSubmit={(e) => handleSubmit(e)}
-          className="w-full max-w-xl card shadow-xl p-8 space-y-6"
-          data-aos="flip-down"
+          className="form w-full md:w-1/2 card shadow-xl p-8 space-y-6"
+          data-aos="zoom-in-up"
         >
           {/* Name Field */}
           <div>

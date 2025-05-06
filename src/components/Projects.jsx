@@ -2,12 +2,12 @@ import { projects } from "../constants/projects";
 
 const Projects = () => {
   return (
-    <section id="projects" className="min-h-screen max-w-6xl mx-auto p-6 pt-16">
+    <section id="projects" className="min-h-screen max-w-6xl mx-auto p-6 pt-25">
       <div className="text-center mb-12" data-aos="fade-up">
-        <h2 className="header text-2xl md:text-4xl font-bold uppercase">
+        <h2 className="header text-2xl md:text-4xl font-bold uppercase text-center sm:text-left">
           My Projects
         </h2>
-        <p className="mt-4 text-sm md:text-lg">
+        <p className="mt-4 text-sm md:text-lg text-center sm:text-left">
           Here are some of the projects I’ve worked on. Click the demo or source
           code links to explore more.
         </p>
@@ -17,26 +17,18 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="card shadow-lg hover:shadow-2xl/70 hover:scale-105 transition duration-300 h-full flex flex-col"
+            className="w-full card shadow-lg hover:shadow-xl/50 hover:scale-105 transition duration-300 flex flex-col"
             data-aos="zoom-in"
-            data-aos-delay={index * 100}
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover"
-            />
             <div className="p-6 flex flex-col flex-grow">
-              <h3 className="header text-base md:text-xl font-bold mb-2">
-                {project.title}
-              </h3>
-              <p className="text-xs md:text-sm mb-4">{project.description}</p>
+              <h3 className="header text-lg font-bold mb-2">{project.title}</h3>
+              <p className="text-sm mb-4">{project.description}</p>
               <div className="flex justify-between mt-auto">
                 <a
                   href={project.demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs md:text-base hover:underline"
+                  className="text-xs hover:underline"
                 >
                   Live Demo
                 </a>
@@ -44,7 +36,7 @@ const Projects = () => {
                   href={project.codeLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs md:text-base hover:underline"
+                  className="text-xs hover:underline"
                 >
                   Source Code
                 </a>

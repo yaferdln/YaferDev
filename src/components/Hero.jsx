@@ -1,18 +1,14 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Hero = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col p-6 items-center justify-center pt-16"
+      className="min-h-screen flex flex-col items-center justify-center pt-25 relative overflow-hidden"
     >
-      <div className="w-full text-center">
+      {/* Hero Content */}
+      <div className="w-full text-center relative z-10">
         {/* Hero Title */}
         <h1
           className="header text-4xl md:text-7xl font-extrabold mb-6"
@@ -40,8 +36,7 @@ const Hero = () => {
               cursor
               cursorStyle="|"
               typeSpeed={50}
-              deleteSpeed={30}
-              delaySpeed={1000}
+              deleteSpeed={40}
             />
           </span>
         </p>
@@ -50,7 +45,7 @@ const Hero = () => {
         <a href="#projects">
           <button
             className="button px-2 py-1 md:px-4 md:py-3 text-sm md:text-md md:font-semibold
-      hover:scale-105 transition duration-300"
+              hover:scale-105 transition duration-300"
             data-aos="zoom-in-up"
           >
             View My Work
